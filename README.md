@@ -1,4 +1,4 @@
-# Brian Hu's Personal CV in Latex
+# Brian Hu's Personal CV in LaTeX
 
 This CV is based loosely on a LaTeX template from [Jason Blevins' website](http://jblevins.org/projects/cv-template/).
 
