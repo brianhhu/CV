@@ -1,0 +1,267 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Brian H. Hu}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{} %http://jblevins.org/projects/cv-template/}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets and compact spacing
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+    \setlength{\itemsep}{0.25em}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0.25em}
+  }
+}{
+  \end{list}
+}
+\setlist[enumerate]{itemsep=0.25em}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+
+\def\FormatName#1{%
+  \def\myname{Hu, B.}%
+  \edef\name{#1}%
+  \ifx\name\myname
+    \textbf{#1}%
+  \else
+    #1%
+  \fi
+}
+
+% makes right aligned and left aligned lines
+\newcommand{\restitle}[2]{%
+  \noindent
+  \makebox[0pt][l]{\normalsize{#1}}%
+  \makebox[\linewidth][r]{\normalsize{#2}}
+  \vspace{-0.2in}}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.475\linewidth}
+  \href{http://krieger.jhu.edu/mbi/}{The Zanvyl Krieger Mind/Brain Institute} \\
+  Johns Hopkins University \\
+  338 Krieger Hall \\
+  3400 N. Charles Street \\
+  Baltimore, MD 21218
+\end{minipage}
+\begin{minipage}{0.52\linewidth}
+  \begin{tabular}{ll}
+    Office Phone: & (410) 516-8640 \\
+    Office Fax: &  (410) 516-8648 \\
+    Mobile Phone: & (703) 638-0245 \\
+    Email: & \href{mailto:brian.hsiaochuan.hu@gmail.com}{\tt brian.hsiaochuan.hu@gmail.com} \\
+    Homepage: & \href{https://brianhhu.github.io/}{\tt https://brianhhu.github.io/} \\
+  \end{tabular}
+\end{minipage}
+
+\section*{Education}
+\vspace{-0.05in}
+\begin{itemize}
+  \item \textbf{Johns Hopkins University}, Baltimore, MD
+  \subitem Ph.D., Biomedical Engineering, June 2017 (expected)
+  \subitem$\bullet$ Thesis: \textit{Grouping mechanisms for object-based vision and attention}
+  \subitem$\bullet$ Advisor: Dr. Ernst Niebur
+  
+  \item \textbf{University of Pittsburgh}, Pittsburgh, PA
+  \subitem B.S., Bioengineering (Minor in Chemistry), \textit{summa cum laude}, May 2011
+  \subitem GPA: 3.99/4.0
+  \vspace{0.05in}
+  \subitem$\bullet$ Swanson School of Engineering Outstanding Senior Award
+  \subitem$\bullet$ Department of Bioengineering Outstanding Student of the Year Award
+\end{itemize}
+
+\vspace{-0.25in}
+
+\section*{Honors and Awards}
+\vspace{-0.05in}
+\begin{itemize}
+  \setlength\itemsep{1pt}
+  \item OIST Computational Neuroscience Course (OCNC) Travel Award, 2014
+  \item Visual Neuroscience Training Program Fellowship, 2012-2013
+\item Neural Engineering Training Initiative Fellowship, 2011-2012
+\item University Honors College Full Tuition Scholarship, 2007-2011
+\item Swanson School of Engineering Honors Scholarship, 2007-2011
+\item Chesapeake and Potomac Pitt Club Alumni Scholarship, 2007-2011
+\end{itemize}
+
+\vspace{-0.25in}
+
+\section*{Research Experience}
+\vspace{-0.05in}
+\begin{itemize}
+\setlength\itemsep{1pt}
+\item \restitle{\textbf{Computational Neuroscience Laboratory}, Graduate Research Assistant}{June 2012--present}
+\begin{itemize}
+\item Advisor: Dr. Ernst Niebur (Johns Hopkins University)
+\item Developing models of object-based vision and attention related to 3D surface perception, visual saliency, contour detection, and figure-ground segmentation
+\end{itemize}
+
+\item \restitle{\textbf{Connor Lab}, Rotation Student}{Jan 2012--Jun 2012}
+\begin{itemize}
+\item Advisor: Dr. Ed Connor (Johns Hopkins University)
+\item Designed novel visual stimuli used in a behavioral task to test for inferotemporal cortex neurons that code for both object identity and object value
+\end{itemize}
+
+\item \restitle{\textbf{Computer Integrated Interventional Systems Laboratory}, Rotation Student}{Aug 2011--Jan 2012}
+\begin{itemize}
+\item Advisor: Dr. Russell Taylor (Johns Hopkins University)
+\item Developed a microcannula system to assess differences in freehand and robot-assisted in vivo retinal vein cannulation in a rabbit animal model
+\end{itemize}
+
+\item \restitle{\textbf{Sensory Motor Integration Laboratory}, Undergraduate Research Assistant}{Apr 2009--Apr 2011}
+\begin{itemize}
+\item Advisor: Dr. Aaron Batista (University of Pittsburgh)
+\item Developed an algorithm to detect changes in monkey reach trajectories, which was used to automatically sort reaches and characterize reaction times to visual and vibrotactile stimuli
+\end{itemize}
+\end{itemize}
+
+\vspace{-0.25in}
+
+\section*{Publications}
+\vspace{-0.05in}
+\bibliographystyle{myabbrvnat}
+\nobibliography{hucv}
+
+\subsection*{Peer-Reviewed Journal Articles}
+
+\begin{enumerate}
+\item \bibentry{Hu_etal16a}
+\end{enumerate}
+
+\subsection*{Conference Proceedings}
+
+\begin{enumerate}[resume]
+\item \bibentry{Hu_etal17COSYNE}
+\item \bibentry{Hu_etal17CISS}
+\item \bibentry{Hu_etal15a}
+\end{enumerate}
+
+\subsection*{Working Papers}
+\begin{enumerate}[resume]
+\item \bibentry{Hu_Niebur16b}
+\end{enumerate}
+
+\vspace{-0.25in}
+
+\section*{Skills}
+\vspace{-0.05in}
+\hspace{1.5em}\textbf{Programming:} MATLAB, Python, familiar with C/C++, JAVA, LabVIEW
+
+\hspace{1.5em}\textbf{Other Tools:} Git, \LaTeX, HTCondor, NEST, Neuron
+
+\hspace{1.5em}\textbf{Operating Systems:} Linux, Windows, Mac OS
+
+\vspace{-0.1in}
+
+\section*{Professional Service and Activities}
+\vspace{-0.05in}
+\begin{itemize}
+\setlength\itemsep{1pt}
+\item Project Mentor, High School/Undergraduate Students, 2014-2016
+\item Teaching Assistant, Modeling and Design (Fall 2013) and Networks (Fall 2014)
+\item Reviewer for \textit{Frontiers in Systems Neuroscience, PLOS ONE, IEEE Transactions on Image Processing, Journal of Cognitive Neuroscience}
+
+\item Member, Society for Neuroscience, 2013--\textit{present}
+\end{itemize}
+
+\vspace{-0.25in}
+
+\section*{Related Coursework}
+\vspace{-0.05in}
+\begin{itemize}
+\item Signals and Systems,
+Linear Algebra,
+Dynamical Systems,
+Probability and Statistics,
+Methods and Logic in Neuroscience,
+Models of the Neuron,
+Theoretical Neuroscience,
+Applied Statistics and Data Analysis,
+Statistical Methods for Imaging,
+Networks, Machine Learning (Coursera.org), Deep Learning (Udacity.com)
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+%\bibliography{hucv}
+
+\end{document}
