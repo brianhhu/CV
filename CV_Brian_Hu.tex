@@ -80,16 +80,13 @@
 
 \usepackage{natbib}
 \usepackage{bibentry}
+\usepackage{xstring}
 
 % bold my name in author list of publications
 \def\FormatName#1{%
-  \def\myname{Hu, B.}%
+  \def\myname{Hu}%
   \edef\name{#1}%
-  \ifx\name\myname
-    \textbf{#1}%
-  \else
-    #1%
-  \fi
+  \IfSubStr{#1}{\myname}{\textbf{#1}}{#1}
 }
 
 % makes right aligned and left aligned lines
@@ -204,6 +201,10 @@
 % \vspace{-0.25in}
 
 \section*{Publications}
+
+% Add note regarding equal contribution
+* denotes equal contribution
+
 \vspace{-0.05in}
 \bibliographystyle{myabbrvnat}
 \nobibliography{hucv}
